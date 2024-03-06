@@ -6,7 +6,7 @@ import cmd
 class HBNBCommand(cmd.Cmd):
     """Command interpreter class for the AirBnB clone project."""
 
-    prompt = 'hbnb '
+    prompt = '(hbnb) '
 
     def do_quit(self, arg):
         """Exit the command interpreter."""
@@ -15,7 +15,7 @@ class HBNBCommand(cmd.Cmd):
     def do_EOF(self, arg):
         """Exit the command interpreter."""
         print()
-        return Ture
+        return True
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
