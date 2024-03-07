@@ -29,12 +29,14 @@ class HBNBCommand(cmd.Cmd):
         if not arg:
             print("** class name missing **")
             return
-        try:
-            new_instance = eval(arg)()
-            new_instance.save()
-            print(new_instance.id)
-        except NameError:
+        arg_list = arg.split()
+        class_name = arg_list[0]
+        if class_name not in ["BaseModel", "User"]:
             print("** class doesn't exist **")
+            return
+        new_instance = eval(class_name)()
+        new_instance.save()
+        print(new_instance.id)
 
     def do_show(self, arg):
         """Prints the string representation of an instance"""
@@ -48,7 +50,7 @@ class HBNBCommand(cmd.Cmd):
         except IndexError:
             print("** instance id missing **")
             return
-        if class_name not in ["BaseModel"]:
+        if class_name not in ["BaseModel", "User"]:
             print("** class doesn't exist **")
             return
         key = "{}.{}".format(class_name, instance_id)
