@@ -4,6 +4,11 @@
 import cmd
 from models.base_model import BaseModel
 from models import storage
+from models.state import State
+from models.city import City
+from models.amenity import Amenity
+from models.place import Place
+from models.review import Review
 
 class HBNBCommand(cmd.Cmd):
     """Command interpreter class for the AirBnB clone project."""
@@ -31,7 +36,7 @@ class HBNBCommand(cmd.Cmd):
             return
         arg_list = arg.split()
         class_name = arg_list[0]
-        if class_name not in ["BaseModel", "User"]:
+        if class_name not in ["BaseModel", "User", "State", "City", "Amenity", "Place", "Review"]:
             print("** class doesn't exist **")
             return
         new_instance = eval(class_name)()
@@ -50,7 +55,7 @@ class HBNBCommand(cmd.Cmd):
         except IndexError:
             print("** instance id missing **")
             return
-        if class_name not in ["BaseModel", "User"]:
+        if class_name not in ["BaseModel", "User", "State", "City", "Amenity", "Place", "Review"]:
             print("** class doesn't exist **")
             return
         key = "{}.{}".format(class_name, instance_id)
