@@ -1,0 +1,33 @@
+.places {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.place {
+	flex: 1 1 45%;
+	margin-bottom: 20px;
+}
+
+.place h2 {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.place .price_by_night {
+	font-size: 16px;
+	color: #FF5A5F;
+}
+
+.place .information {
+	border-top: 1px solid #DDDDDD;
+	padding-top: 10px;
+}
+
+.place .information > div {
+	margin-bottom: 5px;
+}
+
+.place .information .description {
+	font-size: 14px;
+}
