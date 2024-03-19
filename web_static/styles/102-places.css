@@ -1,0 +1,36 @@
+@media (max-width: 600px) {
+        .logo {
+                width: 80px;
+                height: 40px;
+        }
+
+        .container {
+                margin: 10px;
+        }
+
+        .filters {
+                padding: 10px;
+        }
+
+        .places {
+                padding: 10px;
+        }
+
+        .places .place {
+                width: 100%;
+                margin-bottom: 20px;
+        }
+
+        .places .place h2 {
+                font-size: 20px;
+        }
+
+        .price_by_night {
+                font-size: 18px;
+        }
+
+        .information div {
+                font-size: 14px;
+        }
+}
+

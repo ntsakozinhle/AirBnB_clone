@@ -1,0 +1,69 @@
+.locations,
+.amenities {
+	margin-bottom: 20px;
+}
+
+.locations h3,
+.amenities h3 {
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.locations ul,
+.amenities ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.locations ul li h2,
+.amenities ul li {
+	cursor: pointer;
+}
+
+.button {
+	background-color: #FF5A5F;
+	color: #FFFFFF;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.button:hover {
+	opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+	.logo {
+		width: 80px;
+		height: 40px;
+	}
+
+	.container {
+		margin: 10px;
+	}
+
+	.filters {
+		padding: 10px;
+	}
+
+	.places {
+		padding: 10px;
+	}
+
+	.places .place {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.places .place h2 {
+		font-size: 20px;
+	}
+	
+	.price_by_night {
+		font-size: 18px;
+	}
+
+	.information div {
+		font-size: 14px;
+	}
+}

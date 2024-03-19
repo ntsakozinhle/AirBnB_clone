@@ -1,0 +1,27 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	color:#484848;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 30px auto;
+}
+
+.header,
+.footer {
+	background-color: #f2f2f2;
+	padding: 20px;
+	text-align: center;
+}
+
+.filter {
+	background-color: #f2f2f2;
+	padding: 20px;
+}
+
+.places {
+	padding: 20px;
+}
