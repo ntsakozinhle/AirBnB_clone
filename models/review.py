@@ -7,3 +7,10 @@ class Review(BaseModel):
     place_id = ""
     user_id = ""
     text = ""
+
+
+    @classmethod
+    def all(cls):
+        """Return a list of all User instances."""
+        from models import stroage
+        return list(storage.all(cls).values())

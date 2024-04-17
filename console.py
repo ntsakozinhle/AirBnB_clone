@@ -4,6 +4,7 @@
 import cmd
 from models.base_model import BaseModel
 from models import storage
+from models.user import User
 from models.state import State
 from models.city import City
 from models.amenity import Amenity
@@ -34,8 +35,7 @@ class HBNBCommand(cmd.Cmd):
         if not arg:
             print("** class name missing **")
             return
-        arg_list = arg.split()
-        class_name = arg_list[0]
+        arg_list = arg.split()[0]
         if class_name not in ["BaseModel", "User", "State", "City", "Amenity", "Place", "Review"]:
             print("** class doesn't exist **")
             return
@@ -91,9 +91,13 @@ class HBNBCommand(cmd.Cmd):
         if not arg:
             print([str(value) for value in storage.all().values()])
         else:
+            class_name  =  arg.split('.')[0]
+            if class_name not in ["BaseModel", "User", "State", "City", "Amenity", "Place", "Review"]:
+                print("** class doesn't exist **")
+                return
             try:
-                class_name = eval(arg).__name__
-                print([str(value) for key, value in storage.all().items() if class_name in key])
+                instances = eval(class_name).all()
+                print([str(instances) for instance in instances])
             except NameError:
                 print("** class doesn't exist **")
 

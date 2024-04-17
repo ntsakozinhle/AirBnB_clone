@@ -15,3 +15,10 @@ class Place(BaseModel):
     latitude = 0.0
     longitude = 0.0
     amenity_ids = []
+
+
+    @classmethod
+    def all(cls):
+        """Return a list of all User instances."""
+        from models import stroage
+        return list(storage.all(cls).values())
